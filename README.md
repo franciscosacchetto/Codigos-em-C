@@ -27,5 +27,11 @@ Codigos-em-C
 ├── exercicio07/quantidade_digitos_funcao
 ├── exercicio08/mdc_funcao
 ├── exercicio09/vetor_invertido 
-├── exercicio10/soma_vetor 
+├── exercicio10/soma_vetor
+├── exercicio11/media_vetor
+├── exercicio12/entrada_e_saida_matriz
+├── exercicio13/entrada_matriz
+├── exercicio14/matriz_transposta
+├── exercicio15/struct_livro
+├── exercicio016/media_aluno_struct
 └── README.md             
