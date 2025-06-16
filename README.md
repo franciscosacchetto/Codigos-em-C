@@ -1,2 +1,24 @@
-# Codigos-em-C
-Repositório com exercícios e códigos desenvolvidos por mim para praticar e melhorar minha lógica e conhecimento na Linguagem C. Inclui resoluções de problemas, testes e pequenos projetos.
+# 💻 Códigos em C
+
+Este repositório contém exercícios e projetos feitos por mim para praticar e aprimorar meus conhecimentos em **Linguagem C**. Os códigos foram desenvolvidos durante os estudos da disciplina de Programação Estruturada.
+
+---
+
+## 🚀 Tecnologias e Ferramentas
+
+<div style="display: inline_block">
+  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/c/c-original.svg" width="40" title="C"/>
+  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg" width="40" title="Git"/>
+  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg" width="40" title="GitHub"/>
+</div>
+
+---
+
+## 📁 Estrutura do Repositório
+
+```plaintext
+Codigos-em-C/
+├── exercicio01/          # Primeiro exercício simples (ex: leitura de número)
+├── exercicio02/          # Calculadora com switch
+├── projeto-final/        # Projeto maior com várias funções
+└── README.md             # Este arquivo
