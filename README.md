@@ -36,6 +36,6 @@ Codigos-em-C
 ├── exercicio016/media_aluno_struct
 ├── exercicio17/inverter_dois_valores_com_ponteiro
 ├── exercicio18/soma_com_ponteiro
-├── exercicio19/
-├── exercicio20/
+├── exercicio19/fatorial_por_recursividade
+├── exercicio20/fibonacci_por_recusividade
 └── README.md             
