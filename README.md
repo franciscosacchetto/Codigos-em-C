@@ -34,4 +34,8 @@ Codigos-em-C
 ├── exercicio14/matriz_transposta
 ├── exercicio15/struct_livro
 ├── exercicio016/media_aluno_struct
+├── exercicio17/inverter_dois_valores_com_ponteiro
+├── exercicio18/soma_com_ponteiro
+├── exercicio19/
+├── exercicio20/
 └── README.md             
