@@ -17,8 +17,15 @@ Este repositório contém exercícios e projetos feitos por mim para praticar e 
 ## 📁 Estrutura do Repositório
 
 ```plaintext
-Codigos-em-C/
-├── exercicio01/         
-├── exercicio02/         
-├── exercicio03/  
+Codigos-em-C
+├── exercicio01/par_ou_impar
+├── exercicio02/soma_funcao
+├── exercicio03/par_ou_impar_funcao
+├── exercicio04/primo_funcao
+├── exercicio05/media_funcao
+├── exercicio06/potencia_funcao_e_math.h
+├── exercicio07/quantidade_digitos_funcao
+├── exercicio08/mdc_funcao
+├── exercicio09/
+
 └── README.md             
