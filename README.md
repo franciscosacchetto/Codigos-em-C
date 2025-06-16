@@ -26,6 +26,6 @@ Codigos-em-C
 ├── exercicio06/potencia_funcao_e_math.h
 ├── exercicio07/quantidade_digitos_funcao
 ├── exercicio08/mdc_funcao
-├── exercicio09/
-
+├── exercicio09/vetor_invertido 
+├── exercicio10/soma_vetor 
 └── README.md             
