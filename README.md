@@ -18,7 +18,7 @@ Este repositório contém exercícios e projetos feitos por mim para praticar e 
 
 ```plaintext
 Codigos-em-C/
-├── exercicio01/          # Primeiro exercício simples (ex: leitura de número)
-├── exercicio02/          # Calculadora com switch
-├── projeto-final/        # Projeto maior com várias funções
-└── README.md             # Este arquivo
+├── exercicio01/         
+├── exercicio02/         
+├── exercicio03/  
+└── README.md             
