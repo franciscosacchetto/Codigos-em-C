@@ -1,6 +1,6 @@
 # 💻 Códigos em C
 
-Este repositório contém exercícios e projetos feitos por mim para praticar e aprimorar meus conhecimentos em **Linguagem C**. Os códigos foram desenvolvidos durante os estudos da disciplina de Programação Estruturada.
+Este repositório contém exercícios e projetos feitos por mim para praticar e aprimorar meus conhecimentos em **Linguagem C**. Os códigos foram desenvolvidos durante os estudos da disciplina de Algoritmos e Estruturas de Dados.
 
 ---
 
