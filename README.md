@@ -37,5 +37,6 @@ Codigos-em-C
 ├── exercicio17/inverter_dois_valores_com_ponteiro
 ├── exercicio18/soma_com_ponteiro
 ├── exercicio19/fatorial_por_recursividade
-├── exercicio20/fibonacci_por_recusividade
+├── exercicio20/fibonacci_por_recursividade
+├── exercicio021/primo_por_recursividade
 └── README.md             
