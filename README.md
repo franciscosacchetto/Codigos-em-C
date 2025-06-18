@@ -39,4 +39,6 @@ Codigos-em-C
 ├── exercicio19/fatorial_por_recursividade
 ├── exercicio20/fibonacci_por_recursividade
 ├── exercicio021/primo_por_recursividade
+├── exercicio22/mdc_por_recursividade
+├── exercicio23/soma_naturais_por_recursividade
 └── README.md             
