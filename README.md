@@ -43,4 +43,5 @@ Codigos-em-C
 ├── exercicio23/soma_naturais_por_recursividade
 ├── exercicio24/contador_de_digitos_por_recursividade
 ├── exercicio25/palíndromo_por_recursividade
+├── exercicio26/soma_de_todos_os_pares_por_recursividade
 └── README.md             
