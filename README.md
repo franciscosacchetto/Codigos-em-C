@@ -41,4 +41,6 @@ Codigos-em-C
 ├── exercicio021/primo_por_recursividade
 ├── exercicio22/mdc_por_recursividade
 ├── exercicio23/soma_naturais_por_recursividade
+├── exercicio24/contador_de_digitos_por_recursividade
+├── exercicio25/palíndromo_por_recursividade
 └── README.md             
