@@ -112,6 +112,7 @@ int main()
 
     case 4:
         printf("Você selecionou o modo manual.\n");
+        printf("Digite o número de tentativas: \n");
         printf("Digite o numero de inicio: \n");
         printf("Digite o numeor de final: \n");
 
