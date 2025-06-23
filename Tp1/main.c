@@ -14,6 +14,7 @@ int main()
     printf("2 - Modo médio (1 a 50) - 5 tentativas\n");
     printf("3 - Modo difícil (1 a 100) - 4 tentativas\n");
     printf("4 - Modo manual - escolha os números limite da adivinhação e as tentativas\n");
+    printf("5 -  Modo Invertido (1 a 10) - 5 tentativas\n");
     printf("Digite o número correspondente à dificuldade desejada:\n");
     scanf("%d", &escolha);
 
@@ -24,11 +25,11 @@ int main()
         int chuteA, pontuacao = 60;
         srand(time(NULL));
         int numeroAleatorioA = rand();
-        int numeroAleatorioAte10 = rand() % 10;
+        int numeroAleatorioAte10 = (rand() % 10) + 1;
         printf("Tente adivinhar o número aleatório entre 1 e 10.\n");
         printf("Pontuação inicial: %d\n", pontuacao);
         printf("Você tem 6 tentativas.\n");
-        for (int tentativas = 1; tentativas < 7; tentativas++)
+        for (int tentativas = 6; tentativas > 0; tentativas--)
         {
             printf("Digite seu chute:\n");
             scanf("%d", &chuteA);
@@ -36,6 +37,14 @@ int main()
             {
                 printf("Parabéns, você acertou!\n");
                 printf("Sua pontuação final é: %d\n", pontuacao);
+                if(tentativas >= 5)
+                {
+                    printf("Excelente! Você é muito bom nisso!\n");
+                }
+                else if(tentativas != 0 && tentativas < 5)
+                {
+                    printf("Boa! Mas tente melhorar!\n");
+                }
                 return 0;
             }
             else
@@ -50,7 +59,7 @@ int main()
                 }
                 pontuacao -= 10;
             }
-            printf("Tentativas restantes: %d\n", 6 - tentativas);
+            printf("Tentativas restantes: %d\n", tentativas - 1);
         }
         printf("Você esgotou suas tentativas. O número era %d.\n", numeroAleatorioAte10);
         printf("Sua pontuação final é: %d\n", pontuacao);
@@ -61,10 +70,10 @@ int main()
         int chuteB, pontuacaoB = 100;
         srand(time(NULL));
         int numeroAleatorioB = rand();
-        int numeroAleatorioAte50 = rand() % 50;
+        int numeroAleatorioAte50 = (rand() % 50) + 1;
         printf("Tente adivinhar o número aleatório entre 1 e 50.\n");
         printf("Você tem 5 tentativas.\n");
-        for (int tentativas = 1; tentativas < 6; tentativas++)
+        for (int tentativas = 5; tentativas > 0; tentativas--)
         {
             printf("Digite seu chute:\n");
             scanf("%d", &chuteB);
@@ -72,6 +81,14 @@ int main()
             {
                 printf("Parabéns, você acertou!\n");
                 printf("Sua pontuação final é: %d\n", pontuacaoB);
+                if(tentativas >= 3)
+                {
+                    printf("Excelente! Você é muito bom nisso!\n");
+                }
+                else if(tentativas != 0 && tentativas < 3)
+                {
+                    printf("Boa! Mas tente melhorar!\n");
+                }
                 return 0;
             }
             else
@@ -86,28 +103,35 @@ int main()
                 }
                 pontuacaoB -= 20;
             }
-         printf("Tentativas restantes: %d\n", 5 - tentativas);
+         printf("Tentativas restantes: %d\n", tentativas - 1);
         }
         printf("Você esgotou suas tentativas. O número era %d.\n", numeroAleatorioAte50);
         printf("Sua pontuação final é: %d\n", pontuacaoB);
         break;
-
     case 3:
         printf("Você selecionou o modo difícil.\n");
         int chuteC, pontuacaoC = 100;
         srand(time(NULL));
         int numeroAleatorioC = rand();
-        int numeroAleatorioAte100 = rand() % 100;
+        int numeroAleatorioAte100 = (rand() % 100) + 1;
         printf("Tente adivinhar o número aleatório entre 1 e 100.\n");
         printf("Você tem 4 tentativas.\n");
-        for (int tentativas = 1; tentativas < 5; tentativas++)
+        for (int tentativas = 4; tentativas > 0; tentativas--)
         {
             printf("Digite seu chute:\n");
             scanf("%d", &chuteC);
             if (chuteC == numeroAleatorioAte100)
             {
                 printf("Parabéns, você acertou!\n");
-                printf("Sua pontuação final é: %d\n", pontuacaoC);
+                printf("Sua pontuação final é: %d\n", pontuacao);
+                if(tentativas >= 2)
+                {
+                    printf("Excelente! Você é muito bom nisso!\n");
+                }
+                else if(tentativas != 0 && tentativas < 2)
+                {
+                    printf("Boa! Mas tente melhorar!\n");
+                }
                 return 0;
             }
             else
@@ -122,12 +146,11 @@ int main()
                 }
                 pontuacaoC -= 25;
             }
-            printf("Tentativas restantes: %d\n", 4 - tentativas);
+            printf("Tentativas restantes: %d\n", tentativas - 1);
         }
         printf("Você esgotou suas tentativas. O número era %d.\n", numeroAleatorioAte100);
         printf("Sua pontuação final é: %d\n", pontuacaoC);
         break;
-
     case 4:
         int tentativasmodomanual, numeroinicio, numerofinal, chuteD, pontuacaoD = 100;
         printf("Você selecionou o modo manual.\n");
@@ -148,7 +171,15 @@ int main()
             if (chuteD == numeroAleatorioD)
             {
                 printf("Parabéns, você acertou!\n");
-                printf("Sua pontuação final é: %d\n", pontuacaoD);
+                printf("Sua pontuação final é: %d\n", pontuacao);
+                if(tentativas >= (tentativasmodomanual - 2))
+                {
+                    printf("Excelente! Você é muito bom nisso!\n");
+                }
+                else if(tentativas != 0 && tentativas < (tentativasmodomanual - 2))
+                {
+                    printf("Boa! Mas tente melhorar!\n");
+                }
                 return 0;
             }
             else
@@ -168,9 +199,27 @@ int main()
         printf("Você esgotou suas tentativas. O número era %d.\n", numeroAleatorioD);
         printf("Sua pontuação final é: %d\n", pontuacaoD);
         break;
+    case 5:
+        int resposta, usuarioEscolha, direcao;
+        printf("Você selecionou o modo invertido.\n");
+        printf("Neste modo, o computador deve tentar adivinhar o número que você escolheu.\n");
+        printf("Escolha um número entre 1 e 10, mas atenção guarde ele com você, o computador irá adivinhar\n");
+        printf("Seu número é 5? (Digite 1 para sim ou 0 para não)\n");
+        scanf("%d", &resposta);
+        /*if(resposta == 1)
+        {
+            printf("haha!Te peguei!");
+        }
+        else
+        {
+            printf("É menor ou maior? (Digite 1 para maior ou 0 para menor)");
+            scanf("%d",&direcao);
+        }
+        
+        */
+        return 0;
     default:
         printf("Digite uma opção válida.\n");
     }
-
     return 0;
 }
