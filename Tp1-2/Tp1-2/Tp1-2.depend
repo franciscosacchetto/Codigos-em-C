@@ -1,0 +1,6 @@
+# depslib dependency file v1.0
+1757168095 source:c:\users\franc\onedrive\Área de trabalho\engenharia de software\aeds-1\repositorio de codigos-em-c\codigos-em-c\tp1-2\tp1-2\main.c
+	<stdio.h>
+	<stdlib.h>
+	<locale.h>
+
