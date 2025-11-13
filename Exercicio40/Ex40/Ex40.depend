@@ -1,0 +1,7 @@
+# depslib dependency file v1.0
+1762882131 source:c:\users\franc\onedrive\Área de trabalho\engenharia de software\aeds-1\repositorio de codigos-em-c\codigos-em-c\exercicio40\ex40\main.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	<locale.h>
+

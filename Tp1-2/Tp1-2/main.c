@@ -6,177 +6,207 @@
 int main()
 {
     setlocale(LC_ALL,"");
-    srand(time(NULL));
 
-    int vitoriasFacil = 0, derrotasFacil = 0;
-    int vitoriasMedio = 0, derrotasMedio = 0;
-    int vitoriasDificil = 0, derrotasDificil = 0;
-
-    int menu, dificuldade;
-
-    do {
-        printf("\n===== MENU PRINCIPAL =====\n");
-        printf("1. Jogar\n");
-        printf("2. Ver Estatísticas\n");
-        printf("3. Sair\n");
-        printf("Escolha uma opção: ");
-        scanf("%d", &menu);
-
-        switch(menu) {
-            case 1:
-                do {
-                    printf("\n===== SELECIONE A DIFICULDADE =====\n");
-                    printf("1. Fácil\n");
-                    printf("2. Médio\n");
-                    printf("3. Difícil\n");
-                    printf("Escolha o nível de dificuldade: ");
-                    scanf("%d", &dificuldade);
-
-                    switch(dificuldade) {
-                        case 1: {
-                            int chute, numerosecretoate10, pontuacao = 50;
-                            int venceu = 0;
-                            printf("Você selecionou o Modo Fácil\n");
-                            printf("Número entre 1 e 10, 5 tentativas\n");
-                            numerosecretoate10 = (rand() % 10) + 1;
-                            for(int tentativas = 1; tentativas < 6; tentativas++) {
-                                printf("Tentativa %d\n", tentativas);
-                                printf("Digite seu chute: \n");
-                                scanf("%d", &chute);
-                                if(chute == numerosecretoate10) {
-                                    printf("Parabens! Você acertou!\n");
-                                    if(tentativas <= 2) {
-                                        printf("Excelente! Você é muito bom nisso!\n");
-                                    } else {
-                                        printf("Boa! Mas tente melhorar!\n");
-                                    }
-                                    venceu = 1;
-                                    break;
-                                } else {
-                                    if(chute < numerosecretoate10) {
-                                        printf("O número secreto é maior.\n");
-                                    } else {
-                                        printf("O número secreto é menor.\n");
-                                    }
-                                    pontuacao = pontuacao - 10;
-                                }
+    int opcao;
+    printf("Bem-vindo\n");
+    printf("1 - Jogar\n");
+    printf("2 - Sair\n");
+    printf("O que você deseja?\n");
+    scanf("%d", &opcao);
+    if(opcao == 1){
+        int escolha = 1, pontuacaofinal = 0, pontuacaoMAX = 100, contador = 1, soma = 0;
+            do{
+            printf("Bem-vindo ao jogo de Adivinhação!\n");
+            printf("1. Fácil\n");
+            printf("2. Médio\n");
+            printf("3. Difícil\n");
+            int dificuldade;
+            printf("Escolha o nível de dificuldade\n");
+            scanf("%d", &dificuldade);
+            switch(dificuldade)
+            {
+                case 1:
+                    {
+                    int chute, numerosecretoate10, pontuacao = 100;
+                    printf("Você selecionou o Modo Fácil\n");
+                    printf("Bem-vindo ao jogo de Adivinhação Modo Fácil!\n");
+                    printf("Você irá começar com 100 pontos, a cada erro sua pontuação cai em 10 pontos\n");
+                    printf("Número entre 1 e 10, 5 tentativas\n");
+                    srand(time(NULL));
+                    numerosecretoate10 = (rand() % 10) + 1;
+                    for(int tentativas = 1; tentativas < 6; tentativas++)
+                    {
+                        printf("Tentativa %d\n", tentativas);
+                        printf("Digite seu chute: \n");
+                        scanf("%d", &chute);
+                        if(chute == numerosecretoate10)
+                        {
+                            printf("Parabéns! Você acertou!\n");
+                            if(tentativas <= 2)
+                            {
+                                printf("Excelente! Você é muito bom nisso!\n");
                             }
-                            if(venceu) {
-                                vitoriasFacil++;
-                            } else {
-                                derrotasFacil++;
-                                printf("Suas tentativas acabaram! O número era %d\n", numerosecretoate10);
+                            else
+                            {
+                                printf("Boa! Mas tente melhorar!\n");
                             }
-                            printf("Sua pontuação final é %d\n", pontuacao);
                             break;
                         }
-                        case 2: {
-                            int chute, numerosecretoate50, pontuacao = 70;
-                            int venceu = 0;
-                            printf("Você selecionou o Modo Médio\n");
-                            printf("Número entre 1 e 50, 7 tentativas\n");
-                            numerosecretoate50 = (rand() % 50) + 1;
-                            for(int tentativas = 1; tentativas < 8; tentativas++) {
-                                printf("Tentativa %d\n", tentativas);
-                                printf("Digite seu chute: \n");
-                                scanf("%d", &chute);
-                                if(chute == numerosecretoate50) {
-                                    printf("Parabens! Você acertou!\n");
-                                    if(tentativas <= 3) {
-                                        printf("Excelente! Você é muito bom nisso!\n");
-                                    } else {
-                                        printf("Boa! Mas tente melhorar!\n");
-                                    }
-                                    venceu = 1;
-                                    break;
-                                } else {
-                                    if(chute < numerosecretoate50) {
-                                        printf("O número secreto é maior.\n");
-                                    } else {
-                                        printf("O número secreto é menor.\n");
-                                    }
-                                    pontuacao = pontuacao - 10;
-                                }
+                        else
+                        {
+                            if(chute < numerosecretoate10)
+                            {
+                                printf("O número secreto é maior.\n");
                             }
-                            if(venceu) {
-                                vitoriasMedio++;
-                            } else {
-                                derrotasMedio++;
-                                printf("Suas tentativas acabaram! O número era %d\n", numerosecretoate50);
+                            else
+                            {
+                                printf("O número secreto é menor.\n");
                             }
-                            printf("Sua pontuação final é %d\n", pontuacao);
-                            break;
+                            pontuacao = pontuacao - 10;
                         }
-                        case 3: {
-                            int chute, numerosecretoate100, pontuacao = 100;
-                            int venceu = 0;
-                            printf("Você selecionou o Modo Difícil\n");
-                            printf("Número entre 1 e 100, 10 tentativas\n");
-                            numerosecretoate100 = (rand() % 100) + 1;
-                            for(int tentativas = 1; tentativas < 11; tentativas++) {
-                                printf("Tentativa %d\n", tentativas);
-                                printf("Digite seu chute: \n");
-                                scanf("%d", &chute);
-                                if(chute == numerosecretoate100) {
-                                    printf("Parabens! Você acertou!\n");
-                                    if(tentativas <= 4) {
-                                        printf("Excelente! Você é muito bom nisso!\n");
-                                    } else {
-                                        printf("Boa! Mas tente melhorar!\n");
-                                    }
-                                    venceu = 1;
-                                    break;
-                                } else {
-                                    if(chute < numerosecretoate100) {
-                                        printf("O número secreto é maior.\n");
-                                    } else {
-                                        printf("O número secreto é menor.\n");
-                                    }
-                                    pontuacao = pontuacao - 10;
-                                }
-                            }
-                            if(venceu) {
-                                vitoriasDificil++;
-                            } else {
-                                derrotasDificil++;
-                                printf("Suas tentativas acabaram! O número era %d\n", numerosecretoate100);
-                            }
-                            printf("Sua pontuação final é %d\n", pontuacao);
-                            break;
-                        }
-                        default:
-                            printf("Escolha a opção dentro do escopo\n");
-                            break;
                     }
+                    soma = soma + pontuacao;
+                    printf("Sua pontuação final é %d\n", pontuacao);
+                    printf("Deseja jogar novamente (1) ou encerrar o jogo (0)?\n");
+                    scanf("%d", &escolha);
+                    if(escolha == 0){
+                        break;
+                    }
+                    break;
+                    }
+                case 2:
+                    {
+                    int chute, numerosecretoate50, pontuacao = 100;
+                    pontuacaoMAX = pontuacaoMAX + 100;
+                    printf("Você selecionou o Modo Médio\n");
+                    printf("Bem-vindo ao jogo de Adivinhação Modo Médio!\n");
+                    printf("Você irá começar com 100 pontos, a cada erro sua pontuação cai em 10 pontos\n");
+                    printf("Número entre 1 e 50, 7 tentativas\n");
+                    srand(time(NULL));
+                    numerosecretoate50 = (rand() % 50) + 1;
+                    for(int tentativas = 1; tentativas < 8; tentativas++)
+                    {
+                        printf("Tentativa %d\n", tentativas);
+                        printf("Digite seu chute: \n");
+                        scanf("%d", &chute);
+                        if(chute == numerosecretoate50)
+                        {
+                            printf("Parabéns! Você acertou!\n");
+                             if(tentativas <= 3)
+                            {
+                                printf("Excelente! Você é muito bom nisso!\n");
+                            }
+                            else
+                            {
+                                printf("Boa! Mas tente melhorar!\n");
+                            }
+                            break;
+                        }
+                        else
+                        {
+                            if(chute < numerosecretoate50)
+                            {
+                                printf("O número secreto é maior.\n");
+                            }
+                            else
+                            {
+                                printf("O número secreto é menor.\n");
+                            }
+                            pontuacao = pontuacao - 10;
+                        }
+                    }
+                    soma = soma + pontuacao;
+                    printf("Sua pontuação final é %d\n", pontuacao);
+                    printf("Deseja jogar novamente (1) ou encerrar o jogo (0)?\n");
+                    scanf("%d", &escolha);
+                    if(escolha == 0){
+                        break;
+                    }
+                    break;
+                    }
+                case 3:
+                    {
+                    int chute, numerosecretoate100, pontuacao = 100;
+                    pontuacaoMAX = pontuacaoMAX + 100;
+                    printf("Você selecionou o Modo Difícil\n");
+                    printf("Bem-vindo ao jogo de Adivinhação Modo Difícil!\n");
+                    printf("Você irá começar com 100 pontos, a cada erro sua pontuação cai em 10 pontos\n");
+                    printf("Número entre 1 e 100, 10 tentativas\n");
+                    srand(time(NULL));
+                    numerosecretoate100 = (rand() % 100) + 1;
+                    for(int tentativas = 1; tentativas < 11; tentativas++)
+                    {
+                        printf("Tentativa %d\n", tentativas);
+                        printf("Digite seu chute: \n");
+                        scanf("%d", &chute);
+                        if(chute == numerosecretoate100)
+                        {
+                            printf("Parabéns! Você acertou!\n");
+                             if(tentativas <= 4)
+                            {
+                                printf("Excelente! Você é muito bom nisso!\n");
+                            }
+                            else
+                            {
+                                printf("Boa! Mas tente melhorar!\n");
+                            }
+                            break;
+                        }
+                        else
+                        {
+                            if(chute < numerosecretoate100)
+                            {
+                                printf("O número secreto é maior.\n");
+                            }
+                            else
+                            {
+                                printf("O número secreto é menor.\n");
+                            }
+                            pontuacao = pontuacao - 10;
+                        }
+                    }
+                    soma = soma + pontuacao;
+                    pontuacaoMAX = pontuacaoMAX + 100;
+                    printf("Sua pontuação final é %d\n", pontuacao);
+                    printf("Deseja jogar novamente (1) ou encerrar o jogo (0)?\n");
+                    scanf("%d", &escolha);
+                    if(escolha == 0){
+                        break;
+                    }
+                    break;
+                    }
+                default:
+                    {
+                    printf("Escolha uma opção dentro do escopo\n");
+                    break;
+                    }
+            }
+            pontuacaofinal =  soma/contador;
+            pontuacaoMAX = pontuacaoMAX /contador;
+            contador++;
+            }while(escolha == 1);
+            printf("%d é sua pontuação final\n", pontuacaofinal);
+            printf("%d é a pontuação máxima que poderia ser alcançada\n", pontuacaoMAX);
 
-                    int opcaoPosJogo;
-                    printf("\n1. Jogar novamente\n");
-                    printf("2. Voltar ao menu principal\n");
-                    printf("Escolha: ");
-                    scanf("%d", &opcaoPosJogo);
-                    if(opcaoPosJogo == 2) break;
+            if(pontuacaofinal >= 80)
+            {
+                printf("Excelente desempenho geral!\n");
+            }
+            else if(pontuacaofinal <=79 && pontuacaofinal >=50)
+            {
+                printf("Bom trabalho, mas pode melhorar!\n");
+            }
+            else
+            {
+                printf("Precisa treinar mais. Continue tentando!\n");
+            }
 
-                } while(1);
-                break;
 
-            case 2:
-                printf("\n===== ESTATÍSTICAS =====\n");
-                printf("Modo Fácil -> Vitórias: %d | Derrotas: %d\n", vitoriasFacil, derrotasFacil);
-                printf("Modo Médio -> Vitórias: %d | Derrotas: %d\n", vitoriasMedio, derrotasMedio);
-                printf("Modo Difícil -> Vitórias: %d | Derrotas: %d\n", vitoriasDificil, derrotasDificil);
-                printf("=========================\n\n");
-                break;
-
-            case 3:
-                printf("Saindo do jogo... Até logo!\n");
-                break;
-
-            default:
-                printf("Opção inválida! Tente novamente.\n");
-                break;
-        }
-
-    } while(menu != 3);
+    }
+                else{
+                    printf("Você selecionou sair\n");
+                    printf("Saindo\n");
+                }
 
     return 0;
 }
